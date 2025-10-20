@@ -19,17 +19,12 @@ router.post('/register', async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Safe location handling
-    const userLocation = location && location.coordinates
-      ? { type: 'Point', coordinates: location.coordinates }
-      : { type: 'Point', coordinates: [0, 0] };
-
     user = new User({
       name,
       email,
       password: hashedPassword,
       role,
-      location: userLocation,
+      location: location || 'Not specified',
     });
 
     await user.save();
@@ -41,7 +36,6 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
 
 // Login
 router.post('/login', async (req, res) => {
@@ -58,14 +52,6 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: 'Server error' });
   }
-});
-
-router.post('/register', async (req, res) => {
-  console.log('Request body:', req.body);  // Add this line to debug
-
-  const { name, email, password, role, location } = req.body;
-
-  // rest of your code...
 });
 
 module.exports = router;

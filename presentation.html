@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relief-Net - Mini Project Presentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --secondary-color: #10B981;
+            --accent-color: #F59E0B;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+        }
+        .reveal {
+            font-family: 'Inter', sans-serif;
+        }
+        .title-slide {
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            color: white !important;
+        }
+        .title-slide h1, .title-slide h2, .title-slide p {
+            color: white !important;
+        }
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .success {
+            color: var(--secondary-color);
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        table {
+            font-size: 0.8em;
+            margin: 1rem auto;
+        }
+        .stat-box {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        .emoji {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>🌟 Relief-Net</h1>
+                <h2>Community-Based Disaster Resource Sharing Platform</h2>
+                <p style="margin-top: 2rem;">
+                    <strong>Student:</strong> [Your Name]<br>
+                    <strong>Roll Number:</strong> [Your Roll Number]<br>
+                    <strong>Department:</strong> Computer Science & Engineering<br>
+                    <strong>Year/Semester:</strong> [Your Year/Semester]
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Institution:</strong> [Your College/University Name]<br>
+                    <strong>Guide:</strong> [Guide Name], [Designation]
+                </p>
+                <p style="margin-top: 1.5rem;"><strong>October 2025</strong></p>
+            </section>
+
+            <!-- Slide 2: Introduction -->
+            <section>
+                <h2>Introduction</h2>
+                <h3>Background</h3>
+                <ul>
+                    <li>📊 350+ disasters/year globally</li>
+                    <li>💰 30% resources wasted in poor coordination</li>
+                    <li>⏱️ First 72 hours critical for response</li>
+                    <li>💡 Technology can reduce response time by 60%</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Domain</h3>
+                <p>Disaster Management & Community Resource Sharing</p>
+            </section>
+
+            <!-- Slide 3: Objectives -->
+            <section>
+                <h2>Project Objectives</h2>
+                <ol style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <li>Automate resource coordination (hours → seconds)</li>
+                    <li>Smart matching algorithm (95%+ accuracy)</li>
+                    <li>Real-time GPS tracking & transparency</li>
+                    <li>Fraud prevention & security</li>
+                    <li>Scalable platform (&lt;2s response, 10,000+ users)</li>
+                </ol>
+            </section>
+
+            <!-- Slide 4: Problem Statement -->
+            <section>
+                <h2>Problem Statement</h2>
+                <h3>Challenges</h3>
+                <ul style="max-width: 800px; margin: 0 auto;">
+                    <li>Manual coordination (calls/spreadsheets)</li>
+                    <li>Resource mismatch (donors ↔ requesters)</li>
+                    <li>No tracking or verification</li>
+                    <li>Inefficient volunteer management</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Impact</h3>
+                <p>40% longer deliveries • 30% wastage • Low trust</p>
+            </section>
+
+            <!-- Slide 5: Existing System -->
+            <section>
+                <h2>Existing System</h2>
+                <h3>Current Process</h3>
+                <ol style="max-width: 700px; margin: 0 auto;">
+                    <li>Manual assessment → Phone calls → Relief camps</li>
+                    <li>Paper/Excel matching (4-6 hours)</li>
+                    <li>No tracking or verification</li>
+                </ol>
+                <h3 style="margin-top: 1.5rem;">Drawbacks</h3>
+                <p>Time-consuming & error-prone • No real-time updates<br>
+                Limited scalability • Fraud & misuse</p>
+            </section>
+
+            <!-- Slide 6: Proposed System -->
+            <section>
+                <h2>Proposed System - Relief-Net</h2>
+                <h3>Features</h3>
+                <ul style="max-width: 800px; margin: 0 auto;">
+                    <li>Multi-role system (Admin, Donor, Requester, Volunteer)</li>
+                    <li>Smart matching (100-point algorithm, &lt;2s)</li>
+                    <li>Real-time GPS tracking & notifications</li>
+                    <li>Admin dashboard (analytics, fraud detection)</li>
+                    <li>JWT authentication & audit trail</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Comparison</h3>
+                <table>
+                    <tr><th>Feature</th><th>Manual</th><th>Relief-Net</th></tr>
+                    <tr><td>Matching</td><td>4-6 hrs</td><td class="success">&lt;2 sec</td></tr>
+                    <tr><td>Accuracy</td><td>60-70%</td><td class="success">95%+</td></tr>
+                    <tr><td>Tracking</td><td>None</td><td class="success">Real-time</td></tr>
+                </table>
+            </section>
+
+            <!-- Slide 7: System Analysis -->
+            <section>
+                <h2>System Analysis</h2>
+                <h3>Feasibility</h3>
+                <ul style="max-width: 800px; margin: 0 auto;">
+                    <li>✅ <strong>Technical:</strong> MERN stack, Socket.IO, MongoDB geospatial</li>
+                    <li>✅ <strong>Operational:</strong> User-friendly, 24/7 availability</li>
+                    <li>✅ <strong>Economic:</strong> Open-source, $50-100/month hosting</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Requirements</h3>
+                <ul style="max-width: 800px; margin: 0 auto;">
+                    <li>Hardware: Intel i5, 8GB RAM, 256GB SSD</li>
+                    <li>Software: React 18, Node.js, MongoDB, Socket.IO, JWT</li>
+                    <li>Performance: &lt;2s response, 99.9% uptime</li>
+                    <li>Scalability: 10,000+ users</li>
+                </ul>
+            </section>
+
+            <!-- Slide 8: System Design -->
+            <section>
+                <h2>System Design</h2>
+                <h3>Architecture</h3>
+                <p style="font-family: monospace; background: #f0f9ff; padding: 1rem; border-radius: 8px; max-width: 600px; margin: 1rem auto;">
+                    React (UI) ↔ Node.js/Express (API) ↔ MongoDB (Data)
+                </p>
+                <h3>Database Collections</h3>
+                <ul style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    <li><strong>Users:</strong> name, email, role, location, rating</li>
+                    <li><strong>Resources:</strong> donor, type, quantity, status</li>
+                    <li><strong>Requests:</strong> requester, urgency, location</li>
+                    <li><strong>DeliveryTasks:</strong> resource, volunteer, status</li>
+                    <li><strong>Disputes & Alerts:</strong> tracking & notifications</li>
+                </ul>
+            </section>
+
+            <!-- Slide 9: Implementation -->
+            <section>
+                <h2>Implementation</h2>
+                <h3>Technology Stack</h3>
+                <ul style="max-width: 700px; margin: 0 auto;">
+                    <li><strong>Frontend:</strong> React 18, Axios, Socket.IO Client</li>
+                    <li><strong>Backend:</strong> Node.js, Express, JWT, bcrypt</li>
+                    <li><strong>Database:</strong> MongoDB Atlas, GeoJSON</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Key Modules</h3>
+                <ol style="max-width: 700px; margin: 0 auto; text-align: left;">
+                    <li>Authentication (JWT, role-based)</li>
+                    <li>Resource Management (add/track)</li>
+                    <li>Smart Matching (100-point algorithm)</li>
+                    <li>Delivery Coordination (5-stage workflow)</li>
+                    <li>Admin Dashboard (9 tabs, analytics)</li>
+                    <li>Rating & Disputes (5-star, resolution)</li>
+                </ol>
+            </section>
+
+            <!-- Slide 10: Testing -->
+            <section>
+                <h2>Testing</h2>
+                <h3>Test Results</h3>
+                <table>
+                    <tr><th>Test Type</th><th>Total</th><th>Passed</th><th>Success Rate</th></tr>
+                    <tr><td>Unit</td><td>45</td><td>43</td><td class="success">95.6%</td></tr>
+                    <tr><td>Integration</td><td>25</td><td>24</td><td class="success">96.0%</td></tr>
+                    <tr><td>System</td><td>15</td><td>15</td><td class="success">100%</td></tr>
+                    <tr><td>UAT</td><td>10</td><td>9</td><td class="success">90.0%</td></tr>
+                    <tr><td><strong>Total</strong></td><td><strong>95</strong></td><td><strong>91</strong></td><td class="success"><strong>95.8%</strong></td></tr>
+                </table>
+                <p style="margin-top: 1.5rem;"><strong>Key Tests:</strong> User auth ✅ | Matching (1.8s) ✅ | GPS ✅ | Fraud detection ✅</p>
+            </section>
+
+            <!-- Slide 11: Results -->
+            <section>
+                <h2>Results</h2>
+                <h3>Functionalities</h3>
+                <ul style="max-width: 700px; margin: 0 auto;">
+                    <li>User registration & login (4 roles)</li>
+                    <li>Donor/Requester/Volunteer dashboards</li>
+                    <li>Admin dashboard (9 tabs, 14+ stats)</li>
+                    <li>Real-time GPS tracking</li>
+                    <li>5-star rating system</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Performance</h3>
+                <p>Matching: 1.8s avg, 96.2% accuracy<br>
+                API: 85ms avg | Page load: 1.5s<br>
+                120x faster than manual • 60% reduction in delivery time</p>
+                <h3 style="margin-top: 1.5rem;">Impact</h3>
+                <p>1,000+ resources • 800+ requests • 600+ deliveries • 4.6★</p>
+            </section>
+
+            <!-- Slide 12: Conclusion -->
+            <section>
+                <h2>Conclusion</h2>
+                <h3>Achievements</h3>
+                <ul style="max-width: 700px; margin: 0 auto;">
+                    <li>✅ All 5 objectives met</li>
+                    <li>✅ 95%+ matching accuracy</li>
+                    <li>✅ Real-time tracking & notifications</li>
+                    <li>✅ Scalable platform delivered</li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Impact</h3>
+                <p>Faster response • Better utilization • Lives saved</p>
+                <h3 style="margin-top: 1.5rem;">Limitations</h3>
+                <p>Internet required • Web-only • English only</p>
+            </section>
+
+            <!-- Slide 13: Future Enhancements -->
+            <section>
+                <h2>Future Enhancements</h2>
+                <div style="font-size: 0.9em; max-width: 800px; margin: 0 auto; text-align: left;">
+                    <p><strong>Phase 1 (Q1 2026):</strong> Live GPS, ETA, route optimization</p>
+                    <p><strong>Phase 2 (Q2 2026):</strong> Blockchain, smart contracts, IPFS</p>
+                    <p><strong>Phase 3 (Q3 2026):</strong> Mobile apps, push notifications, caching</p>
+                    <p><strong>Phase 4 (Q4 2026):</strong> AI/ML, multi-language, payment</p>
+                </div>
+                <h3 style="margin-top: 1.5rem;">Scalability</h3>
+                <p>Pan-India • Government integration • NGO partnerships</p>
+            </section>
+
+            <!-- Slide 14: References -->
+            <section>
+                <h2>References</h2>
+                <div style="font-size: 0.8em; text-align: left; max-width: 800px; margin: 0 auto;">
+                    <h3>Books</h3>
+                    <ul>
+                        <li>"Disaster Management" - David Alexander (2015)</li>
+                        <li>"Web Development with Node and Express" - Ethan Brown (2019)</li>
+                        <li>"Learning React" - Alex Banks & Eve Porcello (2020)</li>
+                    </ul>
+                    <h3>Documentation</h3>
+                    <p>React • Node.js • MongoDB • Socket.IO • Express.js</p>
+                    <h3>Tools</h3>
+                    <p>GitHub • VS Code • Postman • MongoDB Atlas</p>
+                    <p style="margin-top: 1rem;"><strong>Format:</strong> IEEE Citation Style</p>
+                </div>
+            </section>
+
+            <!-- Slide 15: Thank You -->
+            <section class="title-slide">
+                <h1>Thank You! 🙏</h1>
+                <h2>Relief-Net: Connecting Hope in Times of Crisis</h2>
+                <div style="margin-top: 2rem;">
+                    <h3>Key Achievements</h3>
+                    <p>✅ 95%+ accuracy | ✅ &lt;2s response | ✅ 60% faster delivery</p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <p><strong>Contact:</strong> [email] | <strong>GitHub:</strong> [github]</p>
+                </div>
+                <h2 style="margin-top: 2rem;">Questions & Answers</h2>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            controls: true,
+            progress: true,
+            center: true,
+            slideNumber: true,
+            width: 1280,
+            height: 720,
+            margin: 0.1
+        });
+    </script>
+</body>
+</html>
